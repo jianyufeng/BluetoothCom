@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    //dialog
+    implementation project(path: ':sweet_dialog_library')
+    //Toast
+    implementation 'com.github.GrenderG:Toasty:1.4.2'
+//    implementation 'com.sdsmdg.tastytoast:tastytoast:0.1.1'
+//    implementation 'com.github.johnpersano:supertoasts:2.0'
+    //dialog
+//    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+}

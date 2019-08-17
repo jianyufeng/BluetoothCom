@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border_line_c"
+        android:text="button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:background="@drawable/border_corners_c"
+        android:text="button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:background="@drawable/clic_dow_corners"
+        android:text="button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:background="@drawable/border_circle_c"
+        android:text="bsssssssssssssssssssssutton" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateBehavior="cycle"
+        android:indeterminateDrawable="@drawable/progressbar_circle_c"
+        android:indeterminateTintMode="src_in" />
+
+    <ProgressBar
+        android:id="@+id/my_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="20dp"
+        android:max="10"
+        android:progress="3"
+        android:progressDrawable="@drawable/progressbar_hor_color"
+        android:secondaryProgress="7" />
+
+    <EditText
+        android:text="底部线条EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_for_line_bg"
+        />
+</LinearLayout>

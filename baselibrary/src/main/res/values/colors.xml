@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="c_b">#EEE</color>
+
+    <!--字体颜色-->
+    <color name="c_t_f">#1F2D3D</color>
+    <color name="c_t_s">#8492A6</color>
+    <color name="c_t_t">#888888</color>
+
+    <!--按钮颜色-->
+    <color name="c_b_b">#FF0000</color>
+    <color name="c_b_s">#FFFF00</color>
+</resources>

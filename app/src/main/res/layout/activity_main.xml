@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3E3E3"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/state_titile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="设备状态"
+        android:textColor="#1F2D3D"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/state_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/state_titile">
+
+        <TextView
+            android:id="@+id/tv_state_sahngya"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp30"
+            android:layout_margin="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/solid_state_shangya"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="上压"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/tv_state_yunxing"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/solid_state_yunxing"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="运行"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/tv_state_gaunji"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/solid_state_guanji"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="关机"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/tv_state_daiji"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/solid_state_daiji"
+            android:gravity="center"
+            android:padding="5dp"
+            android:soundEffectsEnabled="false"
+            android:text="待机"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/konmgzhi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/state_content">
+
+        <Button
+            android:id="@+id/bt_kaiji"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/solid_corners_kaiji"
+            android:text="开机"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/bt_guanji"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/solid_corners_guanji"
+            android:text="关机"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sahngya_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="按下上压"
+        android:textColor="#1F2D3D"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/konmgzhi" />
+
+    <com.puyu.mobile.bluetoothcom.view.MyTextView
+        android:id="@+id/tv_sahngya"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_circle_shangya"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="上压"
+        android:textColor="#fff"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sahngya_tip" />
+
+
+    <Button
+        android:id="@+id/bt_lianjie"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp50"
+        android:layout_margin="10dp"
+        android:background="@drawable/solid_corners_cfm"
+        android:text="连接设备"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <include
+        layout="@layout/toast_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/bt_lianjie"
+        app:layout_constraintLeft_toRightOf="@id/bt_lianjie"
+        app:layout_constraintRight_toLeftOf="@id/bt_duankai" />
+
+    <Button
+        android:id="@+id/bt_duankai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/solid_corners_guanji"
+        android:text="断开连接"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:textColor="#1F2D3D"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tv_sahngya" />
+</androidx.constraintlayout.widget.ConstraintLayout>
